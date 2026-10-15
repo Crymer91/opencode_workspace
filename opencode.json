@@ -15,7 +15,44 @@
     "glob": "allow",
     "grep": "allow",
     "list": "allow",
-    "bash": "allow",
+    "bash": {
+      "*": "ask",
+
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git branch*": "allow",
+      "git show*": "allow",
+      "git add*": "allow",
+      "git commit*": "allow",
+
+      "npm test*": "allow",
+      "npm run typecheck*": "allow",
+      "npm run lint*": "allow",
+      "npm run build*": "allow",
+      "npm run configure-repo*": "allow",
+
+      "node --check *": "allow",
+      "node -e *": "allow",
+      "node --input-type=module -e *": "allow",
+      "npx tsx *": "ask",
+
+      "Test-Path *": "allow",
+      "Get-Content *": "allow",
+      "Get-ChildItem *": "allow",
+      "Get-Process *": "allow",
+      "Get-NetTCPConnection *": "allow",
+      "Get-CimInstance *": "allow",
+      "Get-Command *": "allow",
+      "where.exe *": "allow",
+
+      "Invoke-WebRequest *": "allow",
+      "Invoke-RestMethod *": "allow",
+
+      "rm -rf *": "deny",
+      "Remove-Item *": "deny",
+      "taskkill *": "deny"
+    },
     "task": "allow",
     "external_directory": "allow",
     "todowrite": "allow",
